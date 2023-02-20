@@ -1,34 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const keysLeftGroupTop = [
+    "Ac",
+    "Del",
+    "/",
+    "7",
+    "8",
+    "9",
+    "4",
+    "5",
+    "6",
+    "1",
+    "2",
+    "3",
+  ];
+
+  const keysLeftGroupBottom = ["0", "."];
+
+  const keysRightGroup = ["*", "-", "+", "="];
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="CalculatorBox">
+        <div className="Display">
+          <p>6000/2+3227*2</p>
+          <h3>=12,454</h3>
+        </div>
+        <div className="Keys">
+          <div className="LeftGroup">
+            <div className="Top">
+              {keysLeftGroupTop.map((key) => {
+                return <button className={key}>{key}</button>;
+              })}
+            </div>
+
+            <div className="Bottom">
+              {keysLeftGroupBottom.map((key) => {
+                return <button className={key}>{key}</button>;
+              })}
+            </div>
+          </div>
+          <div className="RightGroup">
+            {keysRightGroup.map((key) => {
+              return <button className={key}>{key}</button>;
+            })}
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
