@@ -13,8 +13,27 @@
   display: flex;
 }
 
+.Blur {
+  background-color: rgba(0, 107, 181, 0.63);
+  border-radius: 39px;
+  height: 857px;
+  width: 357px;
+
+  filter: blur(70px);
+  -webkit-filter: blur(70px);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: absolute;
+  left: calc(50% - 178.5px);
+  top: calc(50% - 428.5px);
+}
+
 .CalculatorBox {
-  background-color: #17181a;
+  background-image: linear-gradient(to bottom left, #17181a, #17181a);
+
   margin: auto;
 
   width: 375px;
@@ -26,6 +45,7 @@
 
   display: grid;
   grid-template-rows: 1fr 1fr;
+  z-index: 2;
 }
 
 .Display {

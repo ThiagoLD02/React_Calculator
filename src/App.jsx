@@ -20,12 +20,17 @@ function App() {
 
   const keysRightGroup = ["*", "-", "+", "="];
 
+  const input = "6000/2+3227*2";
+
+  const result = "12,454";
+
   return (
     <div className="App">
+      <div className="Blur" />
       <div className="CalculatorBox">
         <div className="Display">
-          <p>6000/2+3227*2</p>
-          <h3>=12,454</h3>
+          <p>{input}</p>
+          <h3>={result}</h3>
         </div>
         <div className="Keys">
           <div className="LeftGroup">
