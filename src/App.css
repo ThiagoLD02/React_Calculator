@@ -53,6 +53,7 @@
   flex-direction: column;
   align-items: end;
   justify-content: center;
+  overflow: hidden;
 }
 
 .Display p {
@@ -70,6 +71,7 @@
 .Keys {
   display: flex;
   gap: 20px;
+  overflow: hidden;
 }
 
 .LeftGroup {
