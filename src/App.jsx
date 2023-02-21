@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -25,8 +25,6 @@ function App() {
   const [result, setResult] = useState("");
   const [clearInput, setClearInput] = useState(false);
 
-  function eraseInput() {}
-
   function handleButtonClick(key) {
     const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
@@ -36,7 +34,8 @@ function App() {
         setClearInput(false);
         return;
       } else if (key !== "=" && key !== "Ac" && key !== "Del") {
-        setInput(result + key);
+        if (result < 0) setInput("0" + result + key);
+        else setInput(result + key);
         setClearInput(false);
         return;
       } else if (key == "Del") {
@@ -77,7 +76,12 @@ function App() {
         break;
     }
   }
-
+  /**
+   * Utiliza uma maquina de estados para compreender a ordem das operacoes
+   * a serem feitas para se resolver o problema matematico
+   * @param {string} problem String contendo a operacao a ser feita
+   * @returns {number} Resultado do problema
+   */
   function calculate(problem) {
     const splittedProblem = problem.split(/([+\-*/])/);
     let firstNumber = 0.0;
@@ -149,6 +153,13 @@ function App() {
           break;
       }
     }
+    if (firstNumber.toString().length > 8)
+      if (firstNumber.toString().split(".")[1]) {
+        if (firstNumber.toString().split(".")[1].length > 4)
+          firstNumber = firstNumber.toFixed(3);
+      } else {
+        firstNumber = firstNumber.toPrecision(5);
+      }
     return firstNumber;
   }
 

@@ -148,3 +148,12 @@ button:hover {
   background-color: #1991ff;
   color: #b2daff;
 }
+
+@media only screen and (max-width: 600px) {
+  .CalculatorBox {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0;
+  }
+}
