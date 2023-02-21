@@ -4,13 +4,15 @@
 
 ### To install and run the project follow this steps:
 
-> git clone https://github.com/ThiagoLD02/React_Calculator.git
->
-> cd React_Calculator
->
-> npm install
->
-> npm run dev
+```bash
+$ git clone https://github.com/ThiagoLD02/React_Calculator.git
+
+$ cd React_Calculator
+
+$ npm install
+
+$ npm run dev
+```
 
 <br><br>
 
