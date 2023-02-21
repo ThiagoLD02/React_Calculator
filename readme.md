@@ -1,4 +1,4 @@
-### This is a simple calculator made using **React**.
+## This is a simple calculator made using **React**.
 
 ### It's desing was created by Sadek Hossen Rony, here is a [link](https://www.figma.com/community/file/984658356416751911) to his Figma project.
 
@@ -12,9 +12,19 @@
 >
 > npm run dev
 
+<br><br>
+
 ## This is a diagram of the Finity State Machine used to implement the logic to process the operations.
 
-![Diagrama maquina de estados](public/Diagrama.png)
+![Diagram of the Finity State Machine](public/Diagrama.png)
+
+<br><br>
+
+## An example image
+
+![Ilustrative Image](public/print.png)
+
+<br><br>
 
 ## This is a GIF to ilustrate the calculator running
 
